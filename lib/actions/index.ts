@@ -101,7 +101,7 @@ userEmail: string) {
 
         if(!product) return;
 
-        const userExists = product.users.some((user: User) => userEmail.email === userEmail);
+        const userExists = product.users.some((user: User) => user.email === userEmail);
 
         if(!userExists) {
             product.users.push({ email: userEmail });
